@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+/* Light Theme (default) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --section-bg: #f9f9f9;
+  --accent-color: #0d6efd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Dark Theme */
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --section-bg: #1e1e1e;
+  --accent-color: #66b2ff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Apply colors */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.section {
+  background-color: var(--section-bg);
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+h1, h2, h3 {
+  color: var(--text-color);
 }
 
-@keyframes App-logo-spin {
+.name-highlight {
+  color: var(--accent-color);
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+.project-card {
+  margin-bottom: 60px;
+  padding: 20px;
+  border-left: 4px solid #0d6efd;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+.name-highlight {
+  color: #0d6efd; /* Bootstrap Primary (blue) — change if you want another color */
+  position: relative;
+  display: inline-block;
+  animation: fadeInName 2s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInName {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
