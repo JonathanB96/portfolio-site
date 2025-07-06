@@ -16,6 +16,13 @@ function App() {
   return (
     <>
       <Navbar />
+      <img
+      src="/ilav.jpg"
+      alt="Ilav Lunde"
+      className="hero-img"
+      data-aos="zoom-in"
+
+/>
       <section id="home" className="section text-center" data-aos="fade-in">
        <h1 className="display-4">
              Hi, I'm <span className="name-highlight">Ilav Lunde</span>
